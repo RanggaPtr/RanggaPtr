@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071a0d">
+  <title>RanggaPtr // Gorilla Jungle Run</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro" class="intro">
+    <div class="mist mist-a"></div>
+    <div class="mist mist-b"></div>
+
+    <svg class="intro-gorilla" viewBox="-130 -120 260 300" aria-label="Animated gorilla">
+      <ellipse cx="0" cy="62" rx="70" ry="76" class="fur"/>
+      <ellipse cx="0" cy="70" rx="42" ry="48" class="chest"/>
+      <circle cx="0" cy="-18" r="50" class="fur"/>
+      <ellipse cx="0" cy="-3" rx="31" ry="24" class="muzzle"/>
+      <circle cx="-17" cy="-28" r="5" class="eye"/>
+      <circle cx="17" cy="-28" r="5" class="eye"/>
+      <path d="M-17 10 Q0 23 17 10" class="mouth"/>
+      <g class="arm arm-left"><rect x="-100" y="13" width="42" height="118" rx="21" class="fur"/><circle cx="-79" cy="126" r="23" class="hand"/></g>
+      <g class="arm arm-right"><rect x="58" y="13" width="42" height="118" rx="21" class="fur"/><circle cx="79" cy="126" r="23" class="hand"/></g>
+    </svg>
+
+    <div class="intro-copy">
+      <span>RANGGAPTR</span>
+      <small>JUNGLE MODE ACTIVATED</small>
+    </div>
+    <button id="skipIntro" class="ghost-btn">SKIP INTRO</button>
+  </div>
+
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">RANGGAPTR // JUNGLE MODE</p>
+        <h1>GORILLA<br>JUNGLE RUN</h1>
+        <p class="lead">Collect bananas. Dodge bugs. Survive production.</p>
+      </div>
+      <a class="github-link" href="https://github.com/RanggaPtr">← GitHub Profile</a>
+    </header>
+
+    <section class="game-card">
+      <div class="hud">
+        <div><span>SCORE</span><strong id="score">0000</strong></div>
+        <div><span>BANANAS</span><strong id="bananas">00</strong></div>
+        <div><span>BEST</span><strong id="best">0000</strong></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="420"></canvas>
+        <div id="gameOverlay" class="game-overlay">
+          <p class="tiny">PLAYER ONE</p>
+          <h2>READY TO ENTER<br>THE JUNGLE?</h2>
+          <button id="startButton">START RUN</button>
+          <p>SPACE / ↑ / TAP = JUMP &nbsp;•&nbsp; ↓ = DUCK</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>🍌 commits are temporary. jungle is forever.</span>
+      <span>Built for RanggaPtr</span>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

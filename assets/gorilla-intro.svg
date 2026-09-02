@@ -1,0 +1,111 @@
+<svg width="1200" height="390" viewBox="0 0 1200 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06140c"/>
+      <stop offset="50%" stop-color="#0b2e13"/>
+      <stop offset="100%" stop-color="#145a25"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#86ff9b" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#86ff9b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".4"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="390" rx="24" fill="url(#sky)"/>
+  <circle cx="840" cy="85" r="130" fill="url(#glow)"/>
+
+  <!-- distant jungle -->
+  <path d="M0 240 C110 175 180 235 270 184 C360 130 420 245 530 170 C650 88 720 244 835 170 C950 95 1020 225 1200 140 L1200 390 L0 390 Z" fill="#0a3518"/>
+  <path d="M0 285 C110 235 200 300 300 230 C390 168 500 300 610 215 C710 145 850 302 980 210 C1085 142 1140 210 1200 190 L1200 390 L0 390 Z" fill="#072612"/>
+
+  <!-- vines -->
+  <g stroke="#2d7a3c" stroke-width="5" fill="none" opacity=".75">
+    <path d="M100 0 C90 85 150 105 120 190"/>
+    <path d="M1090 0 C1110 85 1040 115 1080 205"/>
+  </g>
+
+  <!-- leaves -->
+  <g fill="#1d7a35" opacity=".95">
+    <ellipse cx="70" cy="64" rx="54" ry="18" transform="rotate(-25 70 64)"/>
+    <ellipse cx="145" cy="55" rx="55" ry="18" transform="rotate(24 145 55)"/>
+    <ellipse cx="1060" cy="70" rx="55" ry="18" transform="rotate(-18 1060 70)"/>
+    <ellipse cx="1135" cy="48" rx="55" ry="18" transform="rotate(26 1135 48)"/>
+  </g>
+
+  <!-- fireflies -->
+  <g fill="#d9ff61">
+    <circle cx="240" cy="115" r="3"><animate attributeName="opacity" values=".1;1;.1" dur="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="925" cy="135" r="4"><animate attributeName="opacity" values="1;.1;1" dur="2.1s" repeatCount="indefinite"/></circle>
+    <circle cx="1010" cy="235" r="3"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- title -->
+  <g font-family="monospace" text-anchor="middle">
+    <text x="600" y="72" font-size="52" font-weight="800" fill="#f4fff6">RANGGAPTR</text>
+    <text x="600" y="108" font-size="17" letter-spacing="5" fill="#7dff97">JUNGLE MODE // SYSTEM ONLINE</text>
+  </g>
+
+  <!-- moving gorilla -->
+  <g filter="url(#shadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="-20 0;-20 0;-20 0;760 0;760 0"
+      keyTimes="0;.18;.56;.88;1"
+      dur="7s" repeatCount="indefinite"/>
+
+    <!-- body -->
+    <g transform="translate(160 205)">
+      <ellipse cx="0" cy="55" rx="62" ry="68" fill="#151b17"/>
+      <ellipse cx="0" cy="60" rx="38" ry="44" fill="#28342c"/>
+      <circle cx="0" cy="-10" r="45" fill="#171d19"/>
+      <ellipse cx="0" cy="0" rx="29" ry="22" fill="#59635b"/>
+      <circle cx="-16" cy="-18" r="4" fill="#d7ff8b"/>
+      <circle cx="16" cy="-18" r="4" fill="#d7ff8b"/>
+      <path d="M-16 10 Q0 21 16 10" stroke="#101410" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+      <!-- legs -->
+      <rect x="-45" y="98" width="30" height="54" rx="14" fill="#151b17">
+        <animateTransform attributeName="transform" type="rotate" values="-8 -30 102;10 -30 102;-8 -30 102" dur=".42s" begin="3.85s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="15" y="98" width="30" height="54" rx="14" fill="#151b17">
+        <animateTransform attributeName="transform" type="rotate" values="10 30 102;-8 30 102;10 30 102" dur=".42s" begin="3.85s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- left arm chest beat -->
+      <g>
+        <rect x="-86" y="20" width="37" height="96" rx="19" fill="#151b17"/>
+        <circle cx="-68" cy="110" r="20" fill="#202822"/>
+        <animateTransform attributeName="transform" type="rotate"
+          values="-28 -52 26;18 -52 26;-28 -52 26;18 -52 26;-28 -52 26;0 -52 26"
+          keyTimes="0;.12;.24;.36;.48;1"
+          dur="3.3s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- right arm chest beat -->
+      <g>
+        <rect x="49" y="20" width="37" height="96" rx="19" fill="#151b17"/>
+        <circle cx="68" cy="110" r="20" fill="#202822"/>
+        <animateTransform attributeName="transform" type="rotate"
+          values="28 52 26;-18 52 26;28 52 26;-18 52 26;28 52 26;0 52 26"
+          keyTimes="0;.12;.24;.36;.48;1"
+          dur="3.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- foreground -->
+  <path d="M0 344 C130 310 260 375 390 337 C530 298 670 385 820 333 C950 290 1050 352 1200 320 L1200 390 L0 390 Z" fill="#041b0c"/>
+  <g fill="#197234">
+    <ellipse cx="120" cy="338" rx="75" ry="17" transform="rotate(-18 120 338)"/>
+    <ellipse cx="1080" cy="345" rx="78" ry="18" transform="rotate(18 1080 345)"/>
+  </g>
+
+  <text x="600" y="368" text-anchor="middle" font-family="monospace" font-size="14" letter-spacing="3" fill="#8bff9f">
+    BUILD • SURVIVE • IMPROVE • REPEAT
+  </text>
+</svg>
